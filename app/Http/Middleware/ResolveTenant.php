@@ -34,5 +34,6 @@ class ResolveTenant
         app()->instance('current_tenant_id', $tenant->id);
         app()->instance('current_tenant', $tenant);
         return $next($request);
+        
     }
 }
