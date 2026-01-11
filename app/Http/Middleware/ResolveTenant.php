@@ -30,7 +30,7 @@ class ResolveTenant
                 'message' => 'Invalid or inactive tenant',
             ], 403);
         }
-
+        
         app()->instance('current_tenant_id', $tenant->id);
         app()->instance('current_tenant', $tenant);
         return $next($request);
