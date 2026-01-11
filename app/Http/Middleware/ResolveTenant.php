@@ -12,6 +12,7 @@ class ResolveTenant
     public function handle(Request $request, Closure $next): Response
     {
         $tenantId = $request->header('X-Tenant-ID');
+        
         if (! $tenantId) {
             return response()->json([
                 'success' => false,
