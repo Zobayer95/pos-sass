@@ -62,7 +62,6 @@ class DatabaseSeeder extends Seeder
         foreach ($customers as $customerData) {
             Customer::create(array_merge($customerData, ['tenant_id' => $tenant->id]));
         }
-
         $this->command->info('Seeded Demo Business tenant:');
         $this->command->info('  Tenant ID: '.$tenant->id);
         $this->command->info('  Owner: owner@demo.com / password');
