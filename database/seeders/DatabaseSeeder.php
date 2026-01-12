@@ -58,10 +58,10 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Bob Smith', 'email' => 'bob@example.com', 'phone' => '+1-555-0102', 'address' => '456 Oak Ave, Town, ST 67890'],
             ['name' => 'Carol White', 'email' => 'carol@example.com', 'phone' => '+1-555-0103', 'address' => '789 Pine Rd, Village, ST 11111'],
         ];
-
         foreach ($customers as $customerData) {
             Customer::create(array_merge($customerData, ['tenant_id' => $tenant->id]));
         }
+        
         $this->command->info('Seeded Demo Business tenant:');
         $this->command->info('  Tenant ID: '.$tenant->id);
         $this->command->info('  Owner: owner@demo.com / password');
