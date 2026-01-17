@@ -7,7 +7,7 @@ use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
 use Illuminate\Support\Collection;
- 
+
 class ReportService
 {
     public function getDailySalesSummary(string $date): array
